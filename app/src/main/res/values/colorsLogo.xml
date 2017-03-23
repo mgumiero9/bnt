@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blueDark4">#091c3a</color>
+    <color name="blueDark3">#103770</color>
+    <color name="blueDark2">#308BCB</color>
+    <color name="blueDark1">#A9bee2</color>
+    <color name="blueGray">#394d6d</color>
+    <color name="blueGrayTranslucid">#11394d6d</color>
+    <color name="turbiGreen">#00cc00</color>
+    <color name="turbiGrayBG">#eeeeee</color>
+    <color name="turbiLightGray">#b7b7b7</color>
+    <color name="white">#ffffff</color>
+
+</resources>
