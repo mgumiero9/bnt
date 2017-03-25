@@ -5,4 +5,6 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="lb_btn_send_money">ENVIAR DINHEIRO</string>
     <string name="lb_btn_history">HISTÓRICO DE ENVIOS</string>
+    <string name="my_name">Marcelo Gusmão Gumiero</string>
+    <string name="my_email">mgumiero9@gmail.com</string>
 </resources>
