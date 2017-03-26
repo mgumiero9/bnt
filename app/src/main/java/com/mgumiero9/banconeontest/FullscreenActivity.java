@@ -2,6 +2,8 @@ package com.mgumiero9.banconeontest;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.ListActivity;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,12 +11,16 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
 public class FullscreenActivity extends AppCompatActivity {
+
+    private final String TAG = FullscreenActivity.class.getSimpleName();
+
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -84,6 +90,7 @@ public class FullscreenActivity extends AppCompatActivity {
             return false;
         }
     };
+    private Button mBtnSendMoney;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +104,16 @@ public class FullscreenActivity extends AppCompatActivity {
 
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
+
+        mBtnSendMoney = (Button) findViewById(R.id.btn_send_money);
+        mBtnSendMoney.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), ListActivity.class);
+                startActivity(intent);
+            }
+        });
+
         //mContentView = findViewById(R.id.fullscreen_content);
 
 

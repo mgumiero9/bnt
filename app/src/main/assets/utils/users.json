@@ -1,0 +1,95 @@
+{
+  "users": [
+    {
+      "id": "0001",
+      "name": "Hsu Wen San",
+      "phone": "5511986548762",
+      "photo": "image1.png"
+    },
+    {
+      "id": "0002",
+      "name": "Carlos de Oliveira",
+      "phone": "5511996756743",
+      "photo": "image2.png"
+    },
+    {
+      "id": "0003",
+      "name": "Patrícia Carlson",
+      "phone": "5511997653245",
+      "photo": "image3.png"
+    },
+    {
+      "id": "0004",
+      "name": "Carly Simon",
+      "phone": "5511996753628",
+      "photo": "image4.png"
+    },
+    {
+      "id": "0005",
+      "name": "Kelly Cristina",
+      "phone": "5511986543627",
+      "photo": "image5.png"
+    },
+    {
+      "id": "0006",
+      "name": "Kátia Campos",
+      "phone": "5511984256374",
+      "photo": "image6.png"
+    },
+    {
+      "id": "0007",
+      "name": "Simone de Castro",
+      "phone": "5511976452213",
+      "photo": "image7.png"
+    },
+    {
+      "id": "0008",
+      "name": "Bruna Carla da Silva",
+      "phone": "5511997644567",
+      "photo": "image8.png"
+    },
+    {
+      "id": "0009",
+      "name": "Patrícia de Souza",
+      "phone": "5511995564738",
+      "photo": "image9.png"
+    },
+    {
+      "id": "0010",
+      "name": "Rogério Gumiero",
+      "phone": "5511995663288",
+      "photo": "image10.png"
+    },
+    {
+      "id": "0011",
+      "name": "Roberto Braga",
+      "phone": "5511991225467",
+      "photo": "image11.png"
+    },
+    {
+      "id": "0012",
+      "name": "Richard Oliver",
+      "phone": "5511996773345",
+      "photo": "image12.png"
+    },
+    {
+      "id": "0013",
+      "name": "Ricardo Garcia",
+      "phone": "5511994632478",
+      "photo": "image13.png"
+    },
+    {
+      "id": "0014",
+      "name": "Oswald Damiano",
+      "phone": "5511997537788",
+      "photo": "image14.png"
+    },
+    {
+      "id": "0015",
+      "name": "Bruno Silva de Gusmão",
+      "phone": "5511994533388",
+      "photo": "image15.png"
+    }
+  ]
+}
+
