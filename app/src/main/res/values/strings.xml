@@ -7,4 +7,6 @@
     <string name="lb_btn_history">HISTÓRICO DE ENVIOS</string>
     <string name="my_name">Marcelo Gusmão Gumiero</string>
     <string name="my_email">mgumiero9@gmail.com</string>
+    <string name="phone">phone</string>
+    <string name="name">name</string>
 </resources>

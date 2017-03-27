@@ -20,7 +20,7 @@ public class User {
 
     public String id;
     public String name;
-    public int phone;
+    public String phone;
     public String photo;
     public String email;
 
@@ -43,7 +43,7 @@ public class User {
                 user.id = users.getJSONObject(i).getString("id");
                 user.name = users.getJSONObject(i).getString("name");
                 user.photo = users.getJSONObject(i).getString("photo");
-                user.phone = users.getJSONObject(i).getInt("phone");
+                user.phone = users.getJSONObject(i).getString("phone");
 
                 userList.add(user);
             }
@@ -89,11 +89,11 @@ public class User {
         this.name = name;
     }
 
-    public int getPhone() {
+    public String  getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 

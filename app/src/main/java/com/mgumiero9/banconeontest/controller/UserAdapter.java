@@ -1,13 +1,11 @@
 package com.mgumiero9.banconeontest.controller;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,9 +13,6 @@ import com.mgumiero9.banconeontest.R;
 import com.mgumiero9.banconeontest.model.User;
 
 import java.util.ArrayList;
-
-import com.mgumiero9.banconeontest.model.User;
-import com.mgumiero9.banconeontest.FullscreenActivity;
 
 /**
  * Created by mgumiero9 on 18/02/17.
@@ -29,6 +24,7 @@ public class UserAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
     private ArrayList<User> mDataSource;
     private Typeface mTypeFace;
+    private String mImageString;
 
     public UserAdapter(Context context, ArrayList<User> items) {
         mContext = context;
@@ -95,97 +91,24 @@ public class UserAdapter extends BaseAdapter {
 
 
         // Get License Plate element
-        TextView tvLicensePlate = (TextView) rowView.findViewById(R.id.tv_list_license_plate);
+        TextView tvName = (TextView) rowView.findViewById(R.id.tv_name);
 
         // Get Brand element
-        TextView tvBrandModel = (TextView) rowView.findViewById(R.id.tv_list_brand_model);
-
-        // Get Fuel Level element
-        TextView tvFuelLevel = (TextView) rowView.findViewById(R.id.tv_list_fuel_level);
-
-        // Get Address element
-        TextView tvAddress = (TextView) rowView.findViewById(R.id.tv_list_address);
-
-        // Get Name element
-        TextView tvName = (TextView) rowView.findViewById(R.id.tv_list_name);
-
-        // Get Distance element
-        TextView tvDistance = (TextView) rowView.findViewById(R.id.tv_list_distance);
+        TextView tvPhone = (TextView) rowView.findViewById(R.id.tv_phone);
 
         // Get ListCarImage element
-        ImageView ivListCarImage = (ImageView) rowView.findViewById(R.id.iv_list_car);
-
-        // Get Buddy element
-        TextView tvBuddy = (TextView) rowView.findViewById(R.id.tv_list_buddy);
-
-        // Get Bomb element
-        TextView tvBomb = (TextView) rowView.findViewById(R.id.tv_list_bomb);
-
-        // Get Place element
-        TextView tvPlace = (TextView) rowView.findViewById(R.id.tv_place);
-
-        // Get Transmission Icon element
-        TextView tv_transmission_icon = (TextView) rowView.findViewById(R.id.tv_transmission_icon);
-
-        // Get Transmission element
-        TextView tv_transmission = (TextView) rowView.findViewById(R.id.tv_transmission);
-
-        // Get Reserva button
-        Button btnBookCar = (Button) rowView.findViewById(R.id.btn_book_car);
-
-        /** Setting up Turbi font */
-        mTypeFace = Typeface.createFromAsset(mContext.getAssets(), "fonts/untitled_font_7.ttf");
-        tvBuddy.setTypeface(mTypeFace);
-        tvBomb.setTypeface(mTypeFace);
-        tvPlace.setTypeface(mTypeFace);
-        tv_transmission_icon.setTypeface(mTypeFace);
+        ImageView ivPhoto = (ImageView) rowView.findViewById(R.id.iv_photo);
 
         /** Selecting the item position */
         User user = (User) getItem(position);
 
         /** Attaching parameters to the view */
-        tvLicensePlate.setText(user.license_plate);
-        tvBrandModel.setText(user.brand + " " + user.model);
-        tvAddress.setText(user.address + ", " + user.number);
         tvName.setText(user.name);
-        tvDistance.setText(user.distance);
-        tv_transmission.setText(user.transmission);
+        tvPhone.setText(user.phone);
+        //ivPhoto.setImageResource(imageId[0]);
 
-        /** Attaching the proper ImageView according to the Brand | Model | Color */
-        switch (user.brand) {
-            case "Hyundai":
-                ivListCarImage.setImageResource(R.drawable.img_hb20);
-                break;
-            case "Jeep" :
-                ivListCarImage.setImageResource(R.drawable.img_renegade);
-                break;
-            case "Mini" :
-                ivListCarImage.setImageResource(R.drawable.img_mini);
-                break;
-        }
-
-        /** Attaching proper transmission icon */
-        if (user.transmission.equals("Manual")) {
-            tv_transmission_icon.setText("A");
-        } else {
-            tv_transmission_icon.setText("z");
-        }
-
-        /** Turning double into percentual */
-        double mPercentFuelLevel = Double.parseDouble(user.fuel_level) * 100;
-        String mPercentFuelLevelString = String.valueOf(mPercentFuelLevel) + " %";
-        tvFuelLevel.setText(mPercentFuelLevelString);
-
-        /** OBSOLETE: To insert image url if needed */
+        /* OBSOLETE: To insert image url if needed */
         //Picasso.with(mContext).load(recipe.imageUrl).placeholder(R.mipmap.ic_launcher).into(thumbnailImageView);
-
-        btnBookCar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext, FirstActivity.class);
-                mContext.startActivity(intent);
-            }
-        });
 
         return rowView;
     }
