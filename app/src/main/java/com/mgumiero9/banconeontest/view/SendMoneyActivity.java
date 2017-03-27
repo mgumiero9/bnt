@@ -5,8 +5,10 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mgumiero9.banconeontest.R;
 import com.mgumiero9.banconeontest.controller.UserAdapter;
@@ -24,23 +26,6 @@ public class SendMoneyActivity extends AppCompatActivity {
     private static final String TAG = SendMoneyActivity.class.getSimpleName();
     private ListView mListView;
     private Typeface mTypeFace;
-
-    Integer[] imageId = {
-            R.drawable.image1,
-            R.drawable.image2,
-            R.drawable.image3,
-            R.drawable.image4,
-            R.drawable.image5,
-            R.drawable.image6,
-            R.drawable.image7,
-            R.drawable.image8,
-            R.drawable.image9,
-            R.drawable.image10,
-            R.drawable.image11,
-            R.drawable.image12,
-            R.drawable.image13,
-            R.drawable.image14,
-            R.drawable.image15 };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,8 +53,6 @@ public class SendMoneyActivity extends AppCompatActivity {
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);*/
 
-        mListView = (ListView) findViewById(R.id.user_list_view);
-
         final ArrayList<User> userList = User.getUsersFromFile("users.json", this);
 
 /*        String[] listItems = new String[userList.size()];
@@ -83,8 +66,17 @@ public class SendMoneyActivity extends AppCompatActivity {
 /*        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems);
         mListView.setAdapter(adapter);*/
 
+        mListView = (ListView) findViewById(R.id.user_list_view);
+
         UserAdapter adapter = new UserAdapter(this, userList);
         mListView.setAdapter(adapter);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getBaseContext(), "You Clicked at: " + position, Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 

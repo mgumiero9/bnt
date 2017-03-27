@@ -26,6 +26,23 @@ public class UserAdapter extends BaseAdapter {
     private Typeface mTypeFace;
     private String mImageString;
 
+    Integer[] imageId = {
+            R.drawable.image1,
+            R.drawable.image2,
+            R.drawable.image3,
+            R.drawable.image4,
+            R.drawable.image5,
+            R.drawable.image6,
+            R.drawable.image7,
+            R.drawable.image8,
+            R.drawable.image9,
+            R.drawable.image10,
+            R.drawable.image11,
+            R.drawable.image12,
+            R.drawable.image13,
+            R.drawable.image14,
+            R.drawable.image15 };
+
     public UserAdapter(Context context, ArrayList<User> items) {
         mContext = context;
         mDataSource = items;
@@ -89,7 +106,6 @@ public class UserAdapter extends BaseAdapter {
         //Todo: Check other optional suggestion for scrolling smoother
         View rowView = mInflater.inflate(R.layout.list_item_user, parent, false);
 
-
         // Get License Plate element
         TextView tvName = (TextView) rowView.findViewById(R.id.tv_name);
 
@@ -105,7 +121,7 @@ public class UserAdapter extends BaseAdapter {
         /** Attaching parameters to the view */
         tvName.setText(user.name);
         tvPhone.setText(user.phone);
-        //ivPhoto.setImageResource(imageId[0]);
+        ivPhoto.setImageResource(imageId[position]);
 
         /* OBSOLETE: To insert image url if needed */
         //Picasso.with(mContext).load(recipe.imageUrl).placeholder(R.mipmap.ic_launcher).into(thumbnailImageView);
