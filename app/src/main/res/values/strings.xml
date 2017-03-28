@@ -9,4 +9,8 @@
     <string name="my_email">mgumiero9@gmail.com</string>
     <string name="phone">phone</string>
     <string name="name">name</string>
+    <string name="withdraw_value">Valor a sacar:</string>
+    <string name="mobile_for_test">(11) 99722-2905</string>
+    <string name="send">ENVIAR</string>
+    <string name="_0_00"> R$ 0,00</string>
 </resources>

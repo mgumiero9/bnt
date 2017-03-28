@@ -1,55 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bg"
-    tools:context="com.mgumiero9.banconeontest.view.SendMoneyActivity">
+    tools:context="com.mgumiero9.banconeontest.view.SendMoneyActivity" >
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="65sp"
-        android:background="@null"
-        android:elevation="4dp"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-
-        <TableRow android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16sp"  >
-
-            <TextView
-                android:id="@+id/tv_back"
-                android:text="k"
-                android:textSize="25sp"
-                android:textColor="@color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:background="@android:color/transparent"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="@string/lb_btn_send_money"
-                android:gravity="center_horizontal"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:padding="10dp"
-                android:layout_weight="1"
-                />
-
-        </TableRow>
-
-    </android.support.v7.widget.Toolbar>
-
-    <ListView
-        android:id="@+id/user_list_view"
-        android:layout_below="@id/my_toolbar"
         android:layout_height="match_parent"
-        android:layout_width="match_parent">
-    </ListView>
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/bg"
+        tools:context="com.mgumiero9.banconeontest.view.SendMoneyActivity">
 
-</RelativeLayout>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="65sp"
+            android:background="@null"
+            android:elevation="4dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TableRow android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16sp"  >
+
+                <TextView
+                    android:id="@+id/tv_back"
+                    android:text="k"
+                    android:textSize="25sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/lb_btn_send_money"
+                    android:gravity="center_horizontal"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    />
+
+            </TableRow>
+
+        </android.support.v7.widget.Toolbar>
+
+        <ListView
+            android:id="@+id/user_list_view"
+            android:layout_below="@id/my_toolbar"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+        </ListView>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -27,6 +27,23 @@ public class SendMoneyActivity extends AppCompatActivity {
     private ListView mListView;
     private Typeface mTypeFace;
 
+    Integer[] imageId = {
+            R.drawable.image1,
+            R.drawable.image2,
+            R.drawable.image3,
+            R.drawable.image4,
+            R.drawable.image5,
+            R.drawable.image6,
+            R.drawable.image7,
+            R.drawable.image8,
+            R.drawable.image9,
+            R.drawable.image10,
+            R.drawable.image11,
+            R.drawable.image12,
+            R.drawable.image13,
+            R.drawable.image14,
+            R.drawable.image15 };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,8 +92,19 @@ public class SendMoneyActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getBaseContext(), "You Clicked at: " + position, Toast.LENGTH_SHORT).show();
+
+                // Add the fragment to the 'loading_text_fragment_container' FrameLayout
+                ValueFragment valueFragment = new ValueFragment();
+                getFragmentManager().beginTransaction()
+                        .add(R.id.container, valueFragment)
+                        .commit();
+
+                /*ImageView ibPic = (ImageView) view.findViewById(R.id.iv_pic_fragment);
+                ibPic.setImageResource(imageId[position]);*/
+
             }
         });
+
 
     }
 
